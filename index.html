@@ -74,71 +74,35 @@ div.ex2 {
   <!-- Slideshow Header -->
   <div class="w3-container" id="apartment">
     <h2 class="w3-text-green">Carriage House On Coolidge</h2>
-    <div class="w3-display-container mySlides">
-    <img src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Outside</p>
-      </div>
+     
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="2018 Large Unit.Kitchen.jpeg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="2018 Large Unit.lg bedroom.jpeg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
     </div>
-    <div class="w3-display-container mySlides">
-    <img src="2018 Large Unit.Kitchen.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Kitchen</p>
-      </div>
-    </div>
-    <div class="w3-display-container mySlides">
-    <img src="2018 Large Unit.lg bedroom.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Bedroom</p>
-      </div>
-    </div>
-    <div class="w3-display-container mySlides">
-    <img src="2012 Guest BR.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Guest Bedroom</p>
-      </div>
-    <div class="w3-display-container mySlides">
-    <img src="bathroom.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Guest Bedroom</p>
-      </div>
-    <div class="w3-display-container mySlides">
-    <img src="bedroom.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Guest Bedroom</p>
-      </div>
-    <div class="w3-display-container mySlides">
-    <img src="livingroom.jpeg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Guest Bedroom</p>
-      </div>
+
+    <div class="w3-half">
+      <img src="2012 Guest BR.jpeg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="bathroom.jpeg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
 
     </div>
   </div>
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Outside">
-    </div>
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="2018 Large Unit.Kitchen.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
-    </div>
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="2018 Large Unit.lg bedroom.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
-    </div>
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="2012 Guest BR.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
-    </div>
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="bathroom.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(5)" title="Second Floor Bathroom">
-    </div>
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="bedroom.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(6)" title="Master Bedroom">
-    </div>
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="livingroom.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(7)" title="Living Room">
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
     </div>
   </div>
 
+
+    </div>
+  </div>
+  
  
     <hr>
     
