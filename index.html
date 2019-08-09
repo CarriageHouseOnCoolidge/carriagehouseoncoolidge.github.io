@@ -8,9 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Arial, Helvetica, sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
+.mySlides {display: none}
 </style>
 <body class="w3-content w3-border-left w3-border-right">
 
@@ -75,42 +73,51 @@ div.ex2 {
 
   <!-- Slideshow Header -->
   <div class="w3-container" id="apartment">
-    <h2 class="w3-text-black">Carriage House On Coolidge</h2>
-     
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%" onclick="onClick(this)">
-      <img src="2018 Large Unit.Kitchen.jpeg" style="width:100%" onclick="onClick(this)">
-      <img src="2018 Large Unit.lg bedroom.jpeg" style="width:100%" onclick="onClick(this)">
+    <h2 class="w3-text-green">Carriage House On Coolidge</h2>
+    <div class="w3-display-container mySlides">
+    <img src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Outside</p>
+      </div>
     </div>
-
-    <div class="w3-half">
-      <img src="2012 Guest BR.jpeg" style="width:100%" onclick="onClick(this)">
-      <img src="bathroom.jpeg" style="width:100%" onclick="onClick(this)">
-      <img src="bedroom.jpeg" style="width:100%" onclick="onClick(this)">
-      <img src="livingroom.jpeg" style="width:100%" onclick="onClick(this)">
-
+    <div class="w3-display-container mySlides">
+    <img src="2018 Large Unit.Kitchen.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Kitchen</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="2018 Large Unit.lg bedroom.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Bedroom</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="2012 Guest BR.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Guest Bedroom</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Outside">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="2018 Large Unit.Kitchen.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="2018 Large Unit.lg bedroom.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="2012 Guest BR.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
     </div>
   </div>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-
-    </div>
-  </div>
-  
  
     <hr>
     
-    <h4><strong>Amenities</strong></h4>
+        <h4><strong>Amenities</strong></h4>
   <div class="w3-row-padding">
       <div class="w3-col s6">
         <p><i class="fa fa-fw fa-home"></i> Furnished</p>
@@ -131,12 +138,23 @@ div.ex2 {
 
       </div>
     </div>
+      <div class="w3-col s6">
+        
+        <p><i class="fa fa-fw fa-home"></i> Furnished</p>
+        <p><i class="fa fa-fw fa-automobile"></i> Parking Available</p>
+        <p><i class="fa fa-fw fa-cutlery"></i> Near Restaurants</p>
+        <p><i class="fa fa-fw fa-hospital-o"></i> Near Hospitals</p>
+        <p><i class="fa fa-fw fa-institution"></i> Near Many Universities</p>
+        <p><i class="fa fa-fw fa-wifi"></i> High-Speed WiFi</p>
+
+      </div>
+    </div>
     <hr>
     
 
-<div class="w3-row-padding"><strong>Information: </strong> Located in a converted carriage house, this charming duplex apartment is fully furnished and situated in a lovely, quiet New England neighborhood. Conveniently located less than 5 miles to Boston’s financial and shopping areas, it is also a short walk to Coolidge Corner, the newly renovated elementary school (K-8), the Longwood Medical area, a wide variety of shops, coffee shops and restaurants, parks and public transportation. Also convenient to area academic institutions, Cambridge, the Western Suburbs and the highways. </div>
+<div class="ex1"><strong>Information: </strong> Located in a converted carriage house, this charming duplex apartment is fully furnished and situated in a lovely, quiet New England neighborhood. Conveniently located less than 5 miles to Boston’s financial and shopping areas, it is also a short walk to Coolidge Corner, the newly renovated elementary school (K-8), the Longwood Medical area, a wide variety of shops, coffee shops and restaurants, parks and public transportation. Also convenient to area academic institutions, Cambridge, the Western Suburbs and the highways. </div>
 <p></p>
-<div class="w3-row-padding"><strong>Lay-out:</strong> The first floor contains an open floor plan with a kitchen-dining area, a living room and a half bath. It has antique maple floors and the kitchen is fully equipped. 
+<div class="ex1"><strong>Lay-out:</strong> The first floor contains an open floor plan with a kitchen-dining area, a living room and a half bath. It has antique maple floors and the kitchen is fully equipped. 
 
 Upstairs there are two bedrooms, and a full bath with tub and shower (blankets, linens and towels are provided). 
 
@@ -181,19 +199,15 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
-
 // Slideshow Apartment Images
 var slideIndex = 1;
 showDivs(slideIndex);
-
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
-
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
-
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
