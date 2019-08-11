@@ -45,6 +45,97 @@ p.ex8 {
   
   
   
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+    <h3>Rental</h3>
+    <h3>$3,400/month</h3>
+    <hr>
+    
+    
+    
+  </div>
+
+ <div class="w3-container">
+    <h4><strong>Carriage House Details</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-bed"></i> 
+          Two Bedrooms, Two Beds</p>
+        <p><i class="fa fa-fw fa-bath"></i> One Full Bath with Tub and One Half Bath</p>
+        <p><i class="fa fa-fw fa-bed"></i> Size: 1,150 S.F.</p>
+      </div>
+
+    </div>
+
+
+
+
+ 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <span class="w3-bar-item">Rental</span>
+  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="w3-container" id="apartment">
+    <h2 class="w3-text-black">Carriage House On Coolidge</h2>
+    <div class="w3-display-container mySlides">
+    <img src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Outside</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="2018 Large Unit.Kitchen.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Kitchen</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="2018 Large Unit.lg bedroom.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Bedroom</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="2012 Guest BR.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Guest Bedroom</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="Medium OUTSIDE 2013Coolidge Street after New Railing - 09_1024.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Outside">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="2018 Large Unit.Kitchen.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="2018 Large Unit.lg bedroom.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="2012 Guest BR.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
+  
+  
+  
+  
   
   
   
@@ -87,15 +178,12 @@ p.ex8 {
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
-
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
-
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
-
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
